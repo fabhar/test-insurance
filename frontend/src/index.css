@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #c0dff3;
+  background-image: url("resource/background.jpeg");
+   background-repeat: no-repeat; 
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+span.result {
+  position: relative;
+  width: 100%;
+}
+
+.result-enter {
+  transition: .5s;
+}
+
+.result-enter.result-enter-active{
+  transform: translateY(0%);
+}
+
+.result-exit{
+  transform: translateY(0);
+  transition: .5s;
+  position : absolute;
+  left: 0;
+  bottom : 0;
+  right: 0;
+}
+
+.result-exit-active{
+  opacity: 0;
+  transform: translateY(-10%);
+}

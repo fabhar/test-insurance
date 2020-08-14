@@ -1,0 +1,35 @@
+{
+  "name": "be-insurance-quote",
+  "version": "0.1.1",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "production": "pm2 start ./src/index.js --watch --name backend-app",
+    "start": "node ./src/index.js",
+    "start-dev": "nodemon index.js",
+    "migrate": "node ./src/database/initialSetup.js",
+    "test": "jest"
+  },
+  "author": "Roberto de Figueiredo Minelli",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mssql": "^5.1.2",
+    "pm2": "^4.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
